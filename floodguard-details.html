@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FloodGuard – Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary: #102c57;
+      --secondary: #f1f5f9;
+      --accent: #0077b6;
+      --text-light: #e0e0e0;
+      --card-bg: #ffffff;
+      --bg-dark: #1a1a1a;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #48aeed, #38e61d);
+      margin: 0;
+      padding: 2rem;
+      color: var(--primary);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .dark-mode h1 {
+      color: #90caf9;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    h2 i {
+      margin-right: 0.5rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease;
+    }
+
+    .dark-mode .section {
+      background: #2b2b2b;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 0.5rem 0.5rem 0 0;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #005f86;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: calc(25% - 1rem);
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery img {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    
+  </style>
+</head>
+<body>
+
+<!-- Inside <body>, replace your main content area with: -->
+
+<h1><i class="fas fa-water"></i> FloodGuard: Safeguarding Communities Against Flooding</h1>
+
+<div class="section">
+  <h2><i class="fas fa-cogs"></i> Languages Used & How to Install</h2>
+  <p><strong>🧑‍💻 Languages & Frameworks:</strong></p>
+  <ul>
+    <li>📱 Flutter & Dart – for cross-platform mobile app development</li>
+    <li>🔗 API – OpenWeatherMap API for weather and flood data</li>
+    <li>📦 JSON – to parse real-time responses</li>
+    <li>📍 Geolocation & HTTP packages – for live data handling</li>
+  </ul>
+
+  <p><strong>📲 How to Install the App on Android:</strong></p>
+  <ol>
+    <li><strong>Enable Developer Mode:</strong>
+      <ul>
+        <li>Go to <em>Settings > About Phone</em></li>
+        <li>Tap <em>Build Number</em> multiple times until Developer Mode is enabled</li>
+        <li>Go to <em>Developer Options</em> and enable <strong>USB Debugging</strong></li>
+      </ul>
+    </li>
+    <li><strong>Connect & Install:</strong>
+      <ul>
+        <li>Connect your Android phone to your computer via USB</li>
+        <li>Run <code>flutter devices</code> in your terminal to detect the phone</li>
+        <li>Use <code>flutter install</code> to build and install the app on the device</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+
+<div class="section">
+  <h2><i class="fas fa-bullseye"></i> Project Overview</h2>
+  <p>FloodGuard is a community-focused mobile app designed to enhance flood preparedness and safety in rural villages. Developed during a Community Service Project by students of Seshadri Rao Gudlavalleru Engineering College, the app provides:</p>
+  <ul>
+    <li>⏱ Real-time flood risk alerts</li>
+    <li>🌦️ Weather forecasts and live updates</li>
+    <li>📘 Flood safety education and emergency guidelines</li>
+    <li>📍 Location-based flood prediction using OpenWeatherMap API</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fas fa-flag-checkered"></i> Objectives</h2>
+  <ul>
+    <li>✅ Predict flood risks using real-time weather data (rainfall, temperature, water levels)</li>
+    <li>✅ Educate communities about flood awareness, prevention and preparedness</li>
+    <li>✅ Build a user-friendly mobile app that communicates risks and safety practices</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fas fa-mobile-alt"></i> App Structure</h2>
+  <p>The FloodGuard app contains the following core sections:</p>
+  <ul>
+    <li><strong>1️⃣ Home Page:</strong> Simple UI with navigation to detection, precaution, and prevention</li>
+    <li><strong>2️⃣ Weather Forecast:</strong> Displays next 12-hour weather predictions</li>
+    <li><strong>3️⃣ Current Weather:</strong> Shows temperature, humidity, and condition (uses live API)</li>
+    <li><strong>4️⃣ Detection Page:</strong> Allows users to input location and pincode to get flood risk status</li>
+    <li><strong>5️⃣ Prevention & Precaution:</strong> Tips and safety guidelines for before, during, and after floods</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fas fa-tools"></i> Technologies Used</h2>
+  <ul>
+    <li>📱 Flutter & Dart – for cross-platform mobile development</li>
+    <li>🛰️ OpenWeatherMap API – to fetch real-time weather and flood data</li>
+    <li>📍 Geolocation – to detect and analyze user’s exact location</li>
+    <li>🔄 HTTP & JSON – for dynamic API calls and response handling</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fas fa-lightbulb"></i> Key Outcomes</h2>
+  <ul>
+    <li>🎯 Delivered a functioning mobile app with real-time detection and alerts</li>
+    <li>📈 Increased community awareness through in-person workshops</li>
+    <li>🧠 Developed technical skills in disaster management and app deployment</li>
+    <li>🛠️ Addressed local flood challenges with tech-enabled solutions</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2><i class="fas fa-images"></i> Screenshots</h2>
+  <div class="gallery">
+    <img src="images/flood1.jpg" alt="Screenshot 1">
+    <img src="images/flood2.jpg" alt="Screenshot 2">
+    <img src="images/flood3.jpg" alt="Screenshot 3">
+    <img src="images/flood4.jpg" alt="Screenshot 4">
+    <img src="images/flood5.jpg" alt="Screenshot 5">
+    <img src="images/flood6.jpg" alt="Screenshot 6">
+    <img src="images/flood7.jpg" alt="Screenshot 7">
+    <img src="images/flood8.jpg" alt="Screenshot 8">
+    <img src="images/flood9.jpg" alt="Screenshot 9">
+    <img src="images/flood10.jpg" alt="Screenshot 10">
+    <img src="images/flood11.jpg" alt="Screenshot 11">
+    <img src="images/flood12.jpg" alt="Screenshot 12">
+    <img src="images/flood13.jpg" alt="Screenshot 13">
+    <img src="images/flood14.jpg" alt="Screenshot 14">
+  </div>
+</div>
+
+<div class="section">
+  <a class="btn" href="https://github.com/kolliMounika9121/floodguard" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+  <a class="btn" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+</div>

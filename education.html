@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - Kolli Mounika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+:root {
+  --primary-color: #102542;
+  --secondary-color: #00796B;
+  --bg-light: #f4f7f9;
+  --bg-dark: #1a1a1a;
+  --text-light: #263238;
+  --text-dark: #e0e0e0;
+  --card-bg: #ffffff;
+  --card-dark-bg: #212121;
+  --accent-color: #FF7043;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(115, 181, 224, 0.9), rgba(30, 200, 73, 0.9)), 
+              url('https://www.transparenttextures.com/patterns/rocky-wall.png');
+  color: var(--text-light);
+  transition: all 0.4s ease;
+  background-attachment: fixed;
+}
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 3.5rem 1rem;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 900;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.5px;
+}
+
+header p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: auto;
+  color: #dcdcdc;
+  font-style: italic;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #e8f5e9;
+  transform: scale(1.1);
+}
+
+main {
+  max-width: 980px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  animation: fadeInUp 1.3s ease-in;
+}
+
+.edu-block {
+  background: var(--card-bg);
+  border-left: 10px solid var(--accent-color);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .edu-block {
+  background: var(--card-dark-bg);
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px dashed var(--accent-color);
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.edu-block h3 {
+  margin: 0.4rem 0;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  margin-top: 1.7rem;
+}
+
+.back-btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.icon {
+  margin-right: 0.6rem;
+  color: var(--accent-color);
+  transition: transform 0.4s, color 0.4s;
+  font-size: 1.4rem;
+}
+
+.icon:hover {
+  transform: rotate(15deg) scale(1.3);
+  color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .edu-block {
+    padding: 1.5rem;
+  }
+
+  .theme-toggle {
+    padding: 0.5rem 1rem;
+  }
+
+  .back-btn {
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-graduation-cap icon"></i>My Education</h1>
+  </header>
+
+  <main>
+    <div class="edu-block">
+      <h2>B.Tech - Information Technology</h2>
+      <h3>Seshadri Rao Gudlavalleru Engineering College</h3>
+      <p><strong>Year of passing:</strong> 2026</p>
+      <p><strong>Academic Duration</strong> 2022 - 2026</p>
+      <p><strong>CGPA:</strong> 9.35</p>
+    </div>
+
+    <div class="edu-block">
+      <h2>Intermediate - MPC</h2>
+      <h3>Sri Chaitanya College, Vuyyuru</h3>
+      <p><strong>Academic Duration:</strong> 2020 - 2022</p>
+      <p><strong>CGPA:</strong> 10</p>
+    </div>
+
+    <div class="edu-block">
+      <h2>SSC - Secondary Education</h2>
+      <h3>Flora Medium School, Vuyyuru</h3>
+      <p><strong>Academic Duration:</strong> 2019-2020</p>
+      <p><strong>CGPA:</strong> 10</p>
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>

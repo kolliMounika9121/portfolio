@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kolli Mounika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #283c86;
+      --secondary-color: #45a247;
+      --text-color: #333;
+      --bg-gradient: linear-gradient(90deg, #0fd156, #20afe8);
+      --box-bg: #ffffff;
+      --accent-color: #007acc;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      background-attachment: fixed;
+      animation: fadeInBody 0.7s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: var(--box-bg);
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      animation: slideInUp 0.9s ease;
+    }
+
+    .contact-item {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .contact-item strong {
+      color: var(--secondary-color);
+      min-width: 80px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    p.back {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back a {
+      background: var(--secondary-color);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back a:hover {
+      background: var(--primary-color);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .contact-box {
+        padding: 2rem 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📞 Contact Me</h1>
+  <div class="contact-box">
+    <div class="contact-item"><strong>Email:</strong> <a href="mailto:kollimounika808@gmail.com">kollimounika808@gmail.com</a></div>
+    <div class="contact-item"><strong>Phone:</strong> <a href="tel:+919121526712">+91 9121526712</a></div>
+    <div class="contact-item"><strong>Address:</strong> Vuyyuru, Andhra Pradesh, India</div>
+    <div class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kolli-mounika9121/" target="_blank">linkedin.com/in/kolli-mounika</a></div>
+    <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/kolliMounika9121" target="_blank">github.com/kolliMounika9121</a></div>
+  </div>
+  <p class="back"><a href="index.html">⬅ Back to Home</a></p>
+</body>
+</html>
