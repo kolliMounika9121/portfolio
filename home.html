@@ -1,173 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kolli Mounika | Welcome</title>
+  <title>Kolli Mounika Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     * {
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
       box-sizing: border-box;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: url(images/8384001.jpg) no-repeat center center/cover;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      color: #ffffff;
+      background:url(images/card.jpg);
+      background-size: cover;
+      color: #2e2e2e;
+      overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 2;
-      height: 100%;
+    header.sticky-nav {
+      position: sticky;
+       background-color: black;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    header.sticky-nav h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: hwb(74 14% 8%);
+    }
+
+    .top-header {
+      background: url('images/8350402.jpg');
+      background-size: cover;
+      background-position: center;
       text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: #00ffe7;
-      text-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .intro-text {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 1.5rem auto;
-      color: #f0f0f0;
+      padding: 4rem 1.5rem 1.5rem;
+      color: #ffffff;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
       animation: fadeIn 2s ease-in-out;
     }
 
-    .skills {
-      margin-bottom: 2rem;
-      font-size: 1rem;
-      color: #b2fefa;
-      font-style: italic;
-      animation: fadeIn 2.5s ease;
+ 
+
+    .top-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
     }
 
-    .enter-btn {
-      background: #00ffe7;
-      color: #121212;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: bold;
+    .top-header p {
+      font-size: 1.2rem;
+      color: #f1f1f1;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .top-header .btn {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #2575fc;
+      margin-top: 1.2rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 30px;
       text-decoration: none;
-      box-shadow: 0 0 15px #00ffe7;
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite alternate;
-    }
-
-    .enter-btn:hover {
-      background: #00c2b2;
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px #00ffe7;
-    }
-
-    .watermark {
-      position: absolute;
-      bottom: 10px;
-      right: 20px;
-      font-size: 4rem;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.05);
-      pointer-events: none;
-      user-select: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     }
 
-    .blob {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(0,255,247,0.2), transparent 70%);
-      border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-      animation: morph 18s ease-in-out infinite;
-      filter: blur(100px);
-      z-index: 1;
+    .top-header .btn:hover {
+      background-color: #e6e6e6;
+      transform: translateY(-2px);
     }
 
-    .blob:nth-child(1) {
-      top: -100px;
-      left: -100px;
+    .navigation-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    .blob:nth-child(2) {
-      bottom: -100px;
-      right: -100px;
-      animation-delay: 4s;
+    .navigation-cards a {
+      text-decoration: none;
     }
 
-    @keyframes morph {
-      0%, 100% {
-        border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
-        transform: scale(1);
-      }
-      50% {
-        border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
-        transform: scale(1.1);
-      }
+    .card {
+      background:linear-gradient(90deg,rgba(0, 221, 255, 0.886),white);
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 0.85rem;
+      transition: all 0.3s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(93, 27, 216, 0.2);
     }
 
-    @keyframes pulse {
-      from {
-        transform: scale(1);
-        box-shadow: 0 0 10px #00ffe7;
-      }
-      to {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #00ffe7;
-      }
+    .card i {
+      font-size: 1.2rem;
+      color: #e31717;
+      margin-bottom: 0.3rem;
     }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 2.2rem; }
-      .intro-text { font-size: 1rem; padding: 0 1rem; }
-      .skills { font-size: 0.95rem; }
-      .watermark { font-size: 2.5rem; }
+    .card span {
+      color: #1b1a1c;
+      font-weight: 600;
     }
+
+    main.content section {
+      background-color: #fff;
+      margin: 2rem;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    main.content section:hover {
+      transform: scale(1.02);
+    }
+
+    section h2, section h1 {
+      color: rgb(238, 22, 22);
+      margin-bottom: 1rem;
+    }
+
+    section ul {
+      padding-left: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+.certs-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #f7faff, #ffffff);
+  text-align: center;
+}
+
+.certs-section h2 {
+  font-size: 2rem;
+  color: #5d1bd8;
+  margin-bottom: 2rem;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.cert-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  padding-bottom: 1.5rem;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(93, 27, 216, 0.2);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.cert-card h3 {
+  font-size: 1.1rem;
+  margin: 1rem 1rem 0.5rem;
+  color: #3b0f6f;
+}
+
+.cert-card p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 1rem;
+}
+.project-section {
+  background: linear-gradient(to right, #f8f9ff, #ffffff);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.project-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-btn,
+.github-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-btn {
+  background-color: #5d1bd8;
+  color: #fff;
+}
+
+.project-btn:hover {
+  background-color: #4b10bd;
+}
+
+.github-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+.github-btn:hover {
+  background-color: #24292e;
+}
+
+
   </style>
 </head>
+
+
 <body>
-  <!-- Animated morph blobs -->
-  <div class="blob"></div>
-  <div class="blob"></div>
-
-  <div class="container">
+  <!-- Sticky header to appear on scroll -->
+  <header class="sticky-nav">
     <h1>Kolli Mounika</h1>
-    <p class="intro-text">
-      Welcome to my professional portfolio! I'm a passionate <strong>Information Technology</strong> student who loves turning ideas into interactive digital experiences.
-    </p>
-    <div class="skills">
-      💻 HTML • CSS • Java • Python • Flutter <br>
-      🎯 Exploring creativity through code & continuous learning.
+    <div class="navigation-cards">
+      <a href="./home.html" class="card"><i class="fas fa-user"></i><br><span>About</span></a>
+      <a href="./education.html" class="card"><i class="fas fa-graduation-cap"></i><br><span>Education</span></a>
+      <a href="./internship.html" class="card"><i class="fas fa-briefcase"></i><br><span>Internship</span></a>
+      <a href="#skills" class="card"><i class="fas fa-tools"></i><br><span>Skills</span></a>
+      <a href="./floodguard-details.html" class="card"><i class="fas fa-code"></i><br><span>Projects</span></a>
+      <a href="./certificates.html" class="card"><i class="fas fa-certificate"></i><br><span>Certifications</span><br></a>
+      <a href="./contact.html" class="card"><i class="fas fa-envelope"></i><br><span>Contact</span></a>
     </div>
-    <a href="index.html" class="enter-btn">🚀 MY Portfolio</a>
-  </div>
+  </header>
 
-  <div class="watermark">Kolli Mounika</div>
+  <!-- Hero Section -->
+  <section class="top-header">
+    <h1>Kolli Mounika Portfolio</h1>
+    <p>Welcome to my personal portfolio! Explore my projects, certifications, technical skills, and contact details.</p>
+    <a href="resume.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
+  </section>
+
+
+
+  <!-- BODY CONTENT WRAPPED IN CONTAINER -->
+  <div class="container">
+    <div class="main">
+      <main class="content">
+        <!-- All your <section> blocks here are now styled with cards automatically -->
+    <section id="about">
+  <h2>🙋‍♀️ About Me</h2>
+  <p>
+    I am <strong>Kolli Mounika</strong>, currently pursuing a Bachelor's degree in <strong>Information Technology</strong> at <strong>Seshadri Rao Gudlavalleru Engineering College</strong>.
+    During my academic journey, I have completed various <strong>certifications</strong>, undertaken impactful <strong>projects</strong>, and actively <strong>participated in hackathons, technical events, and workshops</strong>.
+  </p>
+  <p>
+    <strong>🎯 Career Objective:</strong><br>
+    Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage my learning.
+  </p>
+</section>
+
+    <section id="education">
+      <h1>🎓 Education</h1>
+      <ul>
+        <li><strong>B.Tech IT</strong> – Seshadri Rao GEC (2022–26), <strong>CGPA: 9.35</strong></li>
+        <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya,<strong> Marks secured : 979/1000</strong></li>
+        <li><strong>SSC</strong> – Flora School,<strong> Marks secured : 595/600 </strong></li>
+      </ul>
+    </section>
+
+  <section id="internship">
+  <h2>💼 Internship</h2>
+  <p><strong>Organization:</strong> SmartBridge</p>
+  <p><strong>Technology Stack:</strong> MERN (MongoDB, Express.js, React.js, Node.js)</p>
+  <p>I am currently pursuing an internship at <strong>SmartBridge</strong>, focusing on the MERN stack to build dynamic and scalable full-stack web applications.</p>
+
+  <p><strong>Project:</strong> <em>ShopSmart – Your Digital Grocery Store Experience</em></p>
+  <p>
+    ShopSmart is a modern, responsive web application designed to simplify grocery shopping for users. It features real-time inventory tracking, user authentication, secure payment simulation, and an intuitive user interface built using React.js. The backend handles data efficiently with Node.js and Express.js, while MongoDB is used for storing products, user info, and cart data.
+  </p>
+  <ul>
+    <li>🛒 Product browsing and filtering by category</li>
+    <li>🔐 User login and registration with validation</li>
+    <li>🧾 Cart and checkout with local/session storage</li>
+    <li>📦 Admin interface for managing product inventory</li>
+  </ul>
+      <div class="project-buttons">
+      <a class="btn project-btn" href="internship.html" target="_blank">
+        🔍 View Full Project
+      </a>
+      <a class="btn github-btn" href="https://github.com/kolliMounika9121/ShopSmart" target="_blank">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+</section>
+
+
+    <section id="skills">
+      <h2>🛠️ Technical Skills</h2>
+      <ul>
+        <li>Programming Languages: C, Java, Python</li>
+        <li>Web Technologies: HTML, CSS</li>
+        <li>Database Knowledge: MySQL</li>
+        <li>Framework Knowledge: Flutter (Novice)</li>
+      </ul>
+    </section>
+<section id="projects" class="project-section">
+  <h2>📱 FloodGuard Project</h2>
+  <div class="project-card">
+    <div class="project-info">
+      <p><strong>Title:</strong> FloodGuard – Safeguarding Communities Against Flooding</p>
+      <p><strong>Duration:</strong> May 20 – June 29, and July 15 – July 27, 2024</p>
+      <p><strong>Location:</strong> Gopuvanipalem, Machilipatnam</p>
+      <p><strong>Description:</strong> FloodGuard is a Flutter-based mobile application developed as part of a Community Service Project to help flood-prone villages stay informed and safe. It provides:</p>
+      <ul>
+        <li>📡 Real-time weather alerts and flood warnings using the OpenWeatherMap API</li>
+        <li>🧭 Flood risk predictions based on rainfall, temperature, and humidity</li>
+        <li>📘 Educational content on flood preparedness and emergency planning</li>
+        <li>💬 Community awareness tools and safety protocols</li>
+        <li>📍 Location-based flood detection and updates</li>
+      </ul>
+      <p><strong>Technologies Used:</strong> Flutter, Dart, OpenWeatherMap API, Geolocation, HTTP packages</p>
+      <p><strong>Outcome:</strong> The app has been successfully tested on physical devices, deployed with real-time data feeds, and used to train community members for better flood preparedness.</p>
+    </div>
+
+    <div class="project-buttons">
+      <a class="btn project-btn" href="floodguard-details.html" target="_blank">
+        🔍 View Full Project
+      </a>
+      <a class="btn github-btn" href="https://github.com/kolliMounika9121/floodguard" target="_blank">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="certs" class="certs-section">
+  <h2>🌟 Certifications</h2>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <img src="images/cert-java.jpg" alt="NPTEL Java Certificate" />
+      <h3>NPTEL Java – Elite Certificate</h3>
+      <p>Secured 71% in NPTEL’s Java course. Recognized with Elite certificate.</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="images/cert-c.jpg" alt="C Programming Certificate" />
+      <h3>C Programming – Cisco Academy</h3>
+      <p>Completed foundational C programming course through Cisco Networking Academy.</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="images/intern.png" alt="Mern stack Certificate" />
+      <h3>MERN Stack Internship Project</h3>
+      <p>ShopSmart: Your Digital Grocery Store Experience- A MERN stack grocery web app enabling customers to shop online, sellers to manage inventory, and admins to monitor activities.</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="images/workshop-bi.jpg" alt="Power BI Workshop Certificate" />
+      <h3>Power BI Workshop</h3>
+      <p>Participated in a Power BI workshop focusing on interactive dashboards and reports.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="contact">
+      <h2>📩 Contact</h2>
+      <p>Email: kollimounika808@gmail.com.com</p>
+      <p>Phone: +91 9121526712</p>
+      <p>GitHub: <a href="https://github.com/kolliMounika9121" target="_blank">github.com/kolliMounika9121</a></p>
+    </section>
+      </main>
+    </div>
+      </div>
+
+<div style="margin-top: 2rem;">
+  <a href="index.html" class="btn project-btn" style="background-color: black; color:white;">
+    ⬅ Back to Home
+  </a>
+</div>
+
+</section>
+
+  </div>
 </body>
+
 </html>
